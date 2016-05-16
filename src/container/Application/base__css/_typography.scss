@@ -24,11 +24,6 @@ body {
   font-size: 1.6em;
   font-style: $base-font-style;
   font-weight: $base-font-weight;
-  line-height: 1.4;
-
-  @media #{$viewport-xs} {
-    font-size: 1.9em;
-  }
 
   &:fullscreen {
     width: 100%;
