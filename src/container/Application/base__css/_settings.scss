@@ -1,0 +1,35 @@
+// COLORS
+// -----------------------------------------------------------
+
+$color-white: white !default;
+$color-silver: #F0F0F0 !default;
+$color-gray: #494949 !default;
+
+$color-blue: #00c7f2 !default;
+$color-blue--dark: #1cacaa !default;
+
+$color-orange: #FFB000 !default;
+$color-orange--dark: #ff8a00 !default;
+
+$color-text: $color-gray;
+$color-link: $color-blue;
+$color-primary: $color-silver;
+$color-primary--dark: $color-white;
+$color-secondary: $color-blue;
+
+// Viewports
+// -----------------------------------------------------------
+
+$viewport-xs: 'only screen and (min-width : 768px)';
+$viewport-sm: 'only screen and (min-width : 1024px)';
+$viewport-md: 'only screen and (min-width : 1280px)';
+$viewport-lg: 'only screen and (min-width : 1400px)';
+$viewport-xl: 'only screen and (min-width : 1600px)';
+$viewport-xxl: 'only screen and (min-width : 1920px)';
+
+// Bases
+// -----------------------------------------------------------
+
+$base-font-family: 'open-sans';
+$base-font-style: normal;
+$base-font-weight: 300;

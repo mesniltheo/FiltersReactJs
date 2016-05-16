@@ -1,0 +1,92 @@
+/* TYPOGRAPHY
+---------------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  font-size: 62.5%; // Set baseline font size to 10px, This is used as a baseline for rem (root ems) values
+  font-size: calc(1em * .625); // For IE11 to do the math properly, See http://bit.ly/1g4X0bX
+}
+
+body {
+  position: relative;
+  background: $color-primary--dark;
+  color: $color-text;
+  font-family: $base-font-family;
+  font-size: 1.6em;
+  font-style: $base-font-style;
+  font-weight: $base-font-weight;
+  line-height: 1.4;
+
+  @media #{$viewport-xs} {
+    font-size: 1.9em;
+  }
+
+  &:fullscreen {
+    width: 100%;
+  }
+
+}
+
+// Get rid of gap under images by making them display: inline-block; by default
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul,
+ol,
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+// Links
+// -----------------------------------------------------------
+
+a {
+  color: $color-link;
+  line-height: inherit;
+  text-decoration: none;
+  tap-highlight-color: transparent;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  img { border: 0; }
+}
+
+// Buttons
+// -----------------------------------------------------------
+
+button {
+  display: inline-block;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+// Fonts
+// -----------------------------------------------------------
+
+@font-face {
+  font-family: 'open-sans';
+  src: url('../../../../public/fonts/OpenSans-Regular.woff2') format('woff2'),
+       url('../../../../public/fonts/OpenSans-Regular.ttf') format('ttf'),
+       url('../../../../public/fonts/OpenSans-Regular.svg') format('svg'),
+       url('../../../../public/fonts/OpenSans-Regular.eot') format('eot'),
+       url('../../../../public/fonts/OpenSans-Regular.woff') format('woff');
+}
