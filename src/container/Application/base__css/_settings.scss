@@ -20,12 +20,10 @@ $color-secondary: $color-blue;
 // Viewports
 // -----------------------------------------------------------
 
-$viewport-xs: 'only screen and (min-width : 768px)';
-$viewport-sm: 'only screen and (min-width : 1024px)';
-$viewport-md: 'only screen and (min-width : 1280px)';
-$viewport-lg: 'only screen and (min-width : 1400px)';
-$viewport-xl: 'only screen and (min-width : 1600px)';
-$viewport-xxl: 'only screen and (min-width : 1920px)';
+$viewport-s: 'only screen and (min-width : 768px)';
+$viewport-m: 'only screen and (min-width : 1024px)';
+$viewport-l: 'only screen and (min-width : 1280px)';
+$viewport-xl: 'only screen and (min-width : 1400px)';
 
 // Bases
 // -----------------------------------------------------------

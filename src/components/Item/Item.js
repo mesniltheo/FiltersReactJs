@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import styles from './Item.scss';
 
-export const Item = () => (
+export const Item = props => (
   <div className={styles.item}>
-    item
+    {props.content}
   </div>
 );
+
+Item.propTypes = {
+  content: PropTypes.array,
+};

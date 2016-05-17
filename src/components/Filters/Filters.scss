@@ -1,0 +1,11 @@
+@import '../../container/Application/base__css/_settings';
+
+.filters {
+  width: 350px;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+  @media #{$viewport-s} {
+
+  }
+}

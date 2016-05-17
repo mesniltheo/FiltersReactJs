@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "name": "lorem",
+    "price": "34",
+    "colors":
+      [
+        "blue",
+        "green",
+        "white"
+      ]
+    ,
+    "gender": 1,
+    "category": 1,
+    "theme": 1
+  },
+  {
+    "id": 2,
+    "name": "input",
+    "price": "28",
+    "colors":
+      [
+        "blue",
+        "white",
+        "gray"
+      ]
+    ,
+    "gender": 0,
+    "category": 2,
+    "theme": 0
+  },
+  {
+    "id": 3,
+    "name": "sit amet",
+    "price": "34",
+    "colors":
+      [
+        "red"
+      ]
+    ,
+    "gender": 0,
+    "category": 1,
+    "theme": 1
+  },
+  {
+    "id": 4,
+    "name": "lorem dolor",
+    "price": "19",
+    "colors":
+      [
+        "blue",
+        "green",
+        "white"
+      ]
+    ,
+    "gender": 0,
+    "category": 1,
+    "theme": 2
+  },
+  {
+    "id": 5,
+    "name": "consectetur",
+    "price": "20",
+    "colors":
+      [
+        "pink"
+      ]
+    ,
+    "gender": 1,
+    "category": 4,
+    "theme": 0
+  },
+  {
+    "id": 6,
+    "name": "adiscipit",
+    "price": "20",
+    "colors":
+      [
+        "pink",
+        "red",
+        "green"
+      ]
+    ,
+    "gender": 0,
+    "category": 0,
+    "theme": 1
+  }
+]
