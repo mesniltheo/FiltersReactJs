@@ -22,7 +22,7 @@ export default class Home extends Component {
     filters = _.pull(filters, 'filters: false');
     console.log('filters', filters);
     console.log('final', _.filter(clothes, filters));
-    //this.setState({ data: _.filter(clothes, val) });
+    // this.setState({ data: _.filter(clothes, val) });
   }
 
   render() {

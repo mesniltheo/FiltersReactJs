@@ -35,6 +35,7 @@ export default class Filters extends Component {
       color: '',
       theme: '',
     });
+    this.closeFilters();
   }
 
   render() {
