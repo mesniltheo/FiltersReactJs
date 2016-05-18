@@ -1,0 +1,33 @@
+@import '../../container/Application/base__css/_settings';
+
+.color {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 99rem;
+  display: inline-block;
+  
+  &__white {
+    background-color: $color-white;
+    border: 1px solid $color-silver;
+  }
+
+  &__blue {
+    background-color: $color-blue;
+  }
+
+  &__green {
+    background-color: $color-green;
+  }
+
+  &__gray {
+    background-color: $color-gray;
+  }
+
+  &__pink {
+    background-color: $color-pink;
+  }
+
+  &__red {
+    background-color: $color-red;
+  }
+}

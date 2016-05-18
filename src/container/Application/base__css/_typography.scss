@@ -21,7 +21,7 @@ body {
   background: $color-primary--dark;
   color: $color-text;
   font-family: $base-font-family;
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-style: $base-font-style;
   font-weight: $base-font-weight;
 
@@ -40,6 +40,15 @@ img {
 ul,
 ol,
 dl {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -84,4 +93,13 @@ button {
        url('../../../../public/fonts/OpenSans-Regular.svg') format('svg'),
        url('../../../../public/fonts/OpenSans-Regular.eot') format('eot'),
        url('../../../../public/fonts/OpenSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'open-sans-bold';
+  src: url('../../../../public/fonts/OpenSans-Bold.woff2') format('woff2'),
+       url('../../../../public/fonts/OpenSans-Bold.ttf') format('ttf'),
+       url('../../../../public/fonts/OpenSans-Bold.svg') format('svg'),
+       url('../../../../public/fonts/OpenSans-Bold.eot') format('eot'),
+       url('../../../../public/fonts/OpenSans-Bold.woff') format('woff');
 }

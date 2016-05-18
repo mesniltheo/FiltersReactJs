@@ -2,16 +2,16 @@
 // -----------------------------------------------------------
 
 $color-white: white !default;
-$color-silver: #F0F0F0 !default;
-$color-gray: #494949 !default;
+$color-silver: #c0c0c0 !default;
+$color-gray: #d6d2d2 !default;
+$color-black: #000000 !default;
 
-$color-blue: #00c7f2 !default;
-$color-blue--dark: #1cacaa !default;
+$color-blue: #1d3374 !default;
+$color-green: #2c4f12 !default;
+$color-pink: #f9add6 !default;
+$color-red: #e02424 !default;
 
-$color-orange: #FFB000 !default;
-$color-orange--dark: #ff8a00 !default;
-
-$color-text: $color-gray;
+$color-text: $color-black;
 $color-link: $color-blue;
 $color-primary: $color-silver;
 $color-primary--dark: $color-white;
@@ -29,5 +29,6 @@ $viewport-xl: 'only screen and (min-width : 1400px)';
 // -----------------------------------------------------------
 
 $base-font-family: 'open-sans';
+$base-font-family-bold: 'open-sans-bold';
 $base-font-style: normal;
 $base-font-weight: 300;

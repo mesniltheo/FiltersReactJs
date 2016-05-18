@@ -1,15 +1,98 @@
 @import '../../container/Application/base__css/_settings';
 
 .filters {
-  width: 350px;
-  padding: 20px;
-  box-sizing: border-box;
-  float: left;
 
   &__active {
-    color: red;
+    .filters__content {
+      left: 0;
+    }
   }
-  @media #{$viewport-s} {
 
+  &__selector {
+    @media #{$viewport-m} {
+      display: none;
+    }
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    position: absolute;
+    left: -100%;
+    //left: 0;
+    top: 0;
+    transition: left 300ms;
+    background: $color-white;
+    img {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      width: 2rem;
+      height: 2rem;
+      @media #{$viewport-m} {
+        display: none;
+      }
+    }
+    h2 {
+      font-size: 1.6rem;
+      padding-bottom: 1.5rem;
+      width: 100%;
+      border-bottom: .1rem solid $color-text;
+      font-family: $base-font-family-bold;
+    }
+    h4 {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      padding-bottom: 1rem;
+      width: 100%;
+      max-width: 300px;
+      font-family: $base-font-family-bold;
+    }
+    section {
+      margin-top: 20px;
+    }
+    ul {
+      width: 100%;
+      border-bottom: .1rem solid $color-silver;
+      padding-bottom: 3rem;
+      li {
+        text-transform: capitalize;
+        margin-top: .5rem;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      &.filters__color {
+        li {
+          margin-right: 1rem;
+        }
+      }
+    }
+    @media #{$viewport-m} {
+      width: 35rem;
+      float: left;
+      position: relative;
+      left: 0;
+    }
+  }
+
+  &__inline {
+    ul {
+      li {
+        display: inline;
+        margin-right: 3rem;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__reset {
+    color: $color-silver;
+    margin-top: 2rem;
   }
 }
