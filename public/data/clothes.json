@@ -3,7 +3,7 @@
     "id": 1,
     "name": "lorem",
     "price": "34",
-    "colors":
+    "color":
       [
         "blue",
         "green",
@@ -18,7 +18,7 @@
     "id": 2,
     "name": "input",
     "price": "28",
-    "colors":
+    "color":
       [
         "blue",
         "white",
@@ -33,7 +33,7 @@
     "id": 3,
     "name": "sit amet",
     "price": "34",
-    "colors":
+    "color":
       [
         "red"
       ]
@@ -46,7 +46,7 @@
     "id": 4,
     "name": "lorem dolor",
     "price": "19",
-    "colors":
+    "color":
       [
         "blue",
         "green",
@@ -61,7 +61,7 @@
     "id": 5,
     "name": "consectetur",
     "price": "20",
-    "colors":
+    "color":
       [
         "pink"
       ]
@@ -74,7 +74,7 @@
     "id": 6,
     "name": "adiscipit",
     "price": "20",
-    "colors":
+    "color":
       [
         "pink",
         "red",

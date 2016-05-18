@@ -5,6 +5,10 @@
   padding: 20px;
   box-sizing: border-box;
   float: left;
+
+  &__active {
+    color: red;
+  }
   @media #{$viewport-s} {
 
   }
