@@ -1,7 +1,53 @@
 @import '../../container/Application/base__css/_settings';
 
 .item {
-  background-color: $color-primary;
-  //width: 500px;
-  float: right;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+  @media #{$viewport-m} {
+    width: 32%;
+    display: inline-block;
+    margin-right: 1%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__image {
+    background-color: $color-primary;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding-bottom: 130%;
+  }
+
+  &__imageBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  &__name {
+    text-transform: capitalize;
+    margin-top: 3rem;
+  }
+
+  &__price {
+    font-family: $base-font-family-bold;
+    margin-top: 1rem;
+  }
+
+  &__color {
+    margin-top: 1rem;
+    div {
+      width: .8rem;
+      height: .8rem;
+      cursor: default;
+      @media #{$viewport-l} {
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
 }

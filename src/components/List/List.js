@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import addons from 'react-addons-create-fragment';
 import styles from './List.scss';
 import { Item } from '../../components/Item/Item';
 
@@ -7,17 +6,21 @@ export default class List extends Component {
 
   renderItems() {
     const { content } = this.props;
+    if (content !== []) {
+      return (
+        <div className={styles.list}>
+          {content.map((item, index) => (
+            <Item content={item} key={index} />
+          ))}
+        </div>
+      );
+    }
     return (
-      <div>
-        {content.map((item, index) => {
-          return (
-            <Item content={addons(item)} key={index} />
-          );
-        })}
+      <div className={styles.list}>
+        Aucun resultat
       </div>
     );
   }
-
 
   render() {
     return (

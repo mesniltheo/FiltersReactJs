@@ -93,6 +93,7 @@ button {
        url('../../../../public/fonts/OpenSans-Regular.svg') format('svg'),
        url('../../../../public/fonts/OpenSans-Regular.eot') format('eot'),
        url('../../../../public/fonts/OpenSans-Regular.woff') format('woff');
+  line-height: 1;
 }
 
 @font-face {
@@ -102,4 +103,5 @@ button {
        url('../../../../public/fonts/OpenSans-Bold.svg') format('svg'),
        url('../../../../public/fonts/OpenSans-Bold.eot') format('eot'),
        url('../../../../public/fonts/OpenSans-Bold.woff') format('woff');
+  line-height: 1;
 }

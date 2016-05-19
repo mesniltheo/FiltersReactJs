@@ -1,7 +1,15 @@
 @import '../../container/Application/base__css/_settings';
 
-.item {
-  background-color: $color-primary;
-  width: 500px;
-  float: right;
+.list {
+  @media #{$viewport-m} {
+    width: 70%;
+    margin-left: 30%;
+    margin-top: 2rem;
+  }
+  @media #{$viewport-l} {
+    width: 1000px;
+    float: right;
+    margin-left: 0;
+    margin-top: 4rem;
+  }
 }

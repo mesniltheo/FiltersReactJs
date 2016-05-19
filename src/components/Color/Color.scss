@@ -5,7 +5,13 @@
   height: 1.5rem;
   border-radius: 99rem;
   display: inline-block;
-  
+  cursor: pointer;
+  @media #{$viewport-l} {
+    &:hover {
+      border: 3px solid $color-silver;
+    }
+  }
+
   &__white {
     background-color: $color-white;
     border: 1px solid $color-silver;
