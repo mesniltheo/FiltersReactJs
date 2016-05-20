@@ -18,6 +18,7 @@ export default class Filters extends Component {
   }
 
   getFilter(obj) {
+    // on renvoie vers Home l'object cliqué
     this.props.handleChange(obj);
   }
 
@@ -146,7 +147,7 @@ export default class Filters extends Component {
                 onClick={() => this.getFilter({ theme: 1 })}
               >just do nothing</li>
               <li
-                className={this.props.filters.theme === 3 ? styles.filters__active : ''}
+                className={this.props.filters.theme === 2 ? styles.filters__active : ''}
                 onClick={() => this.getFilter({ theme: 2 })}
               >gone</li>
               <li

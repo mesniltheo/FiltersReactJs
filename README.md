@@ -2,9 +2,11 @@
 
 ## Getting started
 
-Install **node.js**. Then install **webpack** and **webpack-dev-server**.
+Install **node.js**.
 
-Install **node.js**. Then **scss-lint**, if you haven't yet.
+Then install **webpack** and **webpack-dev-server**.
+
+Then **scss-lint**, if you haven't yet.
 ```bash
 gem install scss-lint
 ```

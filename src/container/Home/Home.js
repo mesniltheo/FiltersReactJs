@@ -14,11 +14,14 @@ export default class Home extends Component {
     };
   }
 
+  // On envoie les données la première fois
   componentWillMount() {
     this.filterDatas(this.state.filters);
   }
 
+  // On récupère au clique (dans le composant Filters) les filtres
   handleNewDatas(obj) {
+    // On initialise le filtersDatas
     const filtersDatas = {
       gender: this.state.filters.gender,
       category: this.state.filters.category,
@@ -26,17 +29,24 @@ export default class Home extends Component {
       theme: this.state.filters.theme,
     };
 
+    // On regarde si l'object existe dans le paramètre
     if (obj.gender) {
+      // S'il existe on regarde s'il le state est défini
       if (this.state.filters.gender === undefined) {
+        // Alors on met les datas dans le filtersDatas
         filtersDatas.gender = obj.gender;
       } else {
+        // S'il n'est pas défini on regarde s'il est égal au state
         if (this.state.filters.gender === obj.gender) {
+          // Si oui on supprime l'object dans filtersDatas
           delete filtersDatas.gender;
         } else {
+          // Si non on met les datas dans le filtersDatas
           filtersDatas.gender = obj.gender;
         }
       }
     } else {
+      // Si l'object n'est pas défini on le supprime de filtersDatas
       if (this.state.filters.gender === undefined) {
         delete filtersDatas.gender;
       }
@@ -90,10 +100,12 @@ export default class Home extends Component {
       }
     }
 
+    // enfin on met à jour le state filters
     this.setState({
       filters: filtersDatas,
     });
 
+    // et on appel la fonction permettant de filtrer les données
     this.filterDatas(filtersDatas);
   }
 
@@ -105,6 +117,7 @@ export default class Home extends Component {
   }
 
   filterDatas(filters) {
+    // si le filters n'est pas vide on utilise lodash on en met à jour le state data
     if (!filters.length) {
       this.setState({ data: _.filter(clothes, filters) });
     }
