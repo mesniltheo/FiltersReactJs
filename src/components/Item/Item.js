@@ -2,11 +2,11 @@ import React, { PropTypes } from 'react';
 import { Color } from '../Color/Color';
 import styles from './Item.scss';
 
-import img1 from '../../../public/images/clothing1.jpg';
+import img from '../../../public/images/clothing.jpg';
 let imgBg;
 
 export const Item = props => {
-  imgBg = { backgroundImage: `url(${img1})` };
+  imgBg = { backgroundImage: `url(${img})` };
   return (
     <div className={styles.item}>
       <div className={styles.item__image}>

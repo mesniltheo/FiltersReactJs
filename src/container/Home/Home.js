@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import List from '../../components/List/List';
+import { List } from '../../components/List/List';
 import Filters from '../../components/Filters/Filters';
 import clothes from '../../../public/data/clothes';
 
@@ -97,10 +97,15 @@ export default class Home extends Component {
     this.filterDatas(filtersDatas);
   }
 
+  reset() {
+    this.state = {
+      filters: {},
+    };
+    this.filterDatas({});
+  }
+
   filterDatas(filters) {
-    console.log('filterDatas', filters);
     if (!filters.length) {
-      console.log('filterDatas', filters);
       this.setState({ data: _.filter(clothes, filters) });
     }
   }
@@ -108,8 +113,12 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <Filters handleChange={this.handleNewDatas.bind(this)} />
-        <List content={this.state.data} filters={this.state.filters} />
+        <Filters
+          handleChange={this.handleNewDatas.bind(this)}
+          reset={this.reset.bind(this)}
+          filters={this.state.filters}
+        />
+        <List content={this.state.data} />
       </div>
     );
   }
