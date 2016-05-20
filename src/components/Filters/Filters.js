@@ -77,23 +77,23 @@ export default class Filters extends Component {
             <ul>
               <li
                 // className={this.state.category === 0 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ category: 0 })}
+                onClick={() => this.getFilter({ category: 1 })}
               >new</li>
               <li
                 // className={this.state.category === 1 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ category: 1 })}
+                onClick={() => this.getFilter({ category: 2 })}
               >t-shirts</li>
               <li
                 // className={this.state.category === 2 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ category: 2 })}
+                onClick={() => this.getFilter({ category: 3 })}
               >shorts</li>
               <li
                 // className={this.state.category === 3 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ category: 3 })}
+                onClick={() => this.getFilter({ category: 4 })}
               >hoodies</li>
               <li
                 // className={this.state.category === 4 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ category: 4 })}
+                onClick={() => this.getFilter({ category: 5 })}
               >totebags</li>
             </ul>
           </section>
@@ -143,15 +143,15 @@ export default class Filters extends Component {
             <ul>
               <li
                 // className={this.state.theme === 0 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ theme: 0 })}
+                onClick={() => this.getFilter({ theme: 1 })}
               >just do nothing</li>
               <li
                 // className={this.state.theme === 1 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ theme: 1 })}
+                onClick={() => this.getFilter({ theme: 2 })}
               >gone</li>
               <li
                 // className={this.state.theme === 2 ? styles.filters__active : ''}
-                onClick={() => this.getFilter({ theme: 2 })}
+                onClick={() => this.getFilter({ theme: 3 })}
               >dynamic duo</li>
             </ul>
           </section>

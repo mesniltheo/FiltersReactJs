@@ -11,99 +11,96 @@ export default class Home extends Component {
     this.state = {
       data: clothes,
       filters: {},
-      // filterOnGender: undefined,
-      // filterOnCategory: undefined
     };
   }
 
   componentWillMount() {
-    console.log(this);
-    // this.setState({ data: clothes });
-  }
-
-  componentDidMount() {
     this.filterDatas(this.state.filters);
   }
 
-  componentWillUpdate(nextProp, nextState) {
-    console.log('componentWillUpdate', nextState.filters, this.state.filters);
-    if (nextState.filters.gender !== this.state.filters.gender) {
-      console.log('apply filter gender');
-      this.filterDatas(nextState.filters);
-    }
-
-    if (nextState.filters.category !== this.state.filters.category) {
-      console.log('apply filter category');
-      this.filterDatas(nextState.filters);
-    }
-  }
-
   handleNewDatas(obj) {
-    console.log('handle', obj);
-
-    let _filters = {
+    const filtersDatas = {
       gender: this.state.filters.gender,
       category: this.state.filters.category,
+      color: this.state.filters.color,
+      theme: this.state.filters.theme,
     };
 
-    if (obj.gender !== this.state.filters.gender) {
-      _filters.gender = obj.gender;
-      if (this.state.filters.category === undefined) {
-        delete _filters.category;
-      }
-    }
-
-    if (obj.category !== this.state.filters.category) {
-      _filters.category = obj.category;
+    if (obj.gender) {
       if (this.state.filters.gender === undefined) {
-        delete _filters.gender;
+        filtersDatas.gender = obj.gender;
+      } else {
+        if (this.state.filters.gender === obj.gender) {
+          delete filtersDatas.gender;
+        } else {
+          filtersDatas.gender = obj.gender;
+        }
+      }
+    } else {
+      if (this.state.filters.gender === undefined) {
+        delete filtersDatas.gender;
       }
     }
 
-    console.log('setState', _filters);
+    if (obj.category) {
+      if (this.state.filters.category === undefined) {
+        filtersDatas.category = obj.category;
+      } else {
+        if (this.state.filters.category === obj.category) {
+          delete filtersDatas.category;
+        } else {
+          filtersDatas.category = obj.category;
+        }
+      }
+    } else {
+      if (this.state.filters.category === undefined) {
+        delete filtersDatas.category;
+      }
+    }
+
+    if (obj.color) {
+      if (this.state.filters.color === undefined) {
+        filtersDatas.color = obj.color;
+      } else {
+        if (this.state.filters.color === obj.color) {
+          delete filtersDatas.color;
+        } else {
+          filtersDatas.color = obj.color;
+        }
+      }
+    } else {
+      if (this.state.filters.color === undefined) {
+        delete filtersDatas.color;
+      }
+    }
+
+    if (obj.theme) {
+      if (this.state.filters.theme === undefined) {
+        filtersDatas.theme = obj.theme;
+      } else {
+        if (this.state.filters.theme === obj.theme) {
+          delete filtersDatas.theme;
+        } else {
+          filtersDatas.theme = obj.theme;
+        }
+      }
+    } else {
+      if (this.state.filters.theme === undefined) {
+        delete filtersDatas.theme;
+      }
+    }
 
     this.setState({
-      filters: _filters,
+      filters: filtersDatas,
     });
 
-    // this.filterDatas(param);
-
-
-    // console.log(obj.gender, obj.category);
-    // let param = {};
-    // if (this.state.filterOnGender === undefined) {
-    //   this.state.filterOnGender = obj.gender;
-    //   param.gender = obj.gender;
-    // } else if (this.state.filterOnGender === obj.gender) {
-    //   this.setState({filterOnGender: undefined});
-    // } else if(obj.gender !== undefined){
-    //   this.state.filterOnGender = obj.gender;
-    //   param.gender = obj.gender;
-    // }
-    //
-    // if (this.state.filterOnCategory === undefined) {
-    //   // on applqique un filter
-    //   this.state.filterOnCategory = obj.category;
-    //   param.gender = obj.category;
-    // } else if (this.state.filterOnCategory === obj.category) {
-    //   this.setState({filterOnCategory: undefined});
-    // } else if(obj.category !== undefined){
-    //   this.state.filterOnCategory = obj.category;
-    //   param.gender = obj.category;
-    // }
-    //
-    // console.log('param', param);
-    // this.filterDatas(param);
+    this.filterDatas(filtersDatas);
   }
 
   filterDatas(filters) {
     console.log('filterDatas', filters);
-
-    // filters = _.pull(val, 'filters: true');
-    // filters = _.pull(filters, 'filters: false');
-    // console.log('filters', filters);
-    // console.log('final', _.filter(clothes, filters));
     if (!filters.length) {
+      console.log('filterDatas', filters);
       this.setState({ data: _.filter(clothes, filters) });
     }
   }
@@ -112,7 +109,7 @@ export default class Home extends Component {
     return (
       <div>
         <Filters handleChange={this.handleNewDatas.bind(this)} />
-        <List content={this.state.data} />
+        <List content={this.state.data} filters={this.state.filters} />
       </div>
     );
   }

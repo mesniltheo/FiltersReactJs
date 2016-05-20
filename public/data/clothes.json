@@ -15,7 +15,7 @@
     "color": "white",
     "gender": 1,
     "category": 2,
-    "theme": 0
+    "theme": 2
   },
   {
     "id": 3,
@@ -42,7 +42,7 @@
     "color": "pink",
     "gender": 2,
     "category": 4,
-    "theme": 0
+    "theme": 2
   },
   {
     "id": 6,
@@ -50,7 +50,7 @@
     "price": "20",
     "color": "green",
     "gender": 1,
-    "category": 0,
+    "category": 5,
     "theme": 1
   }
 ]
